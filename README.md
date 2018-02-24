@@ -90,8 +90,21 @@ sudo python3 publish.py -a http://127.0.0.1:5000/publish -p edit.md -t YOURTOKEN
 
 and after deploy on heroku(same):
 
+
 ````
 sudo python3 publish.py -a https://lainly.herokuapp.com/publish -p edit.md -t YOURTOKEN
+````
+
+
+heroku
+------
+
+````
+heroku maintenance:on
+git push heroku master
+heroku run python manage.py db upgrade
+heroku restart
+heroku maintenance:off
 ````
 
 TODO
