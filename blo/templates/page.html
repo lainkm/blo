@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+  {{ content|safe }}
+  {% if pub_time %}
+    <p class="page-date">by {{ config.AUTHOR }} &nbsp;, &nbsp; On &nbsp;{{ format_datetime(pub_time) }} &nbsp;, &nbsp; {{ read_times }} read &nbsp;&nbsp;
+  {% endif %}
+
+  {% if tags %}
+    <p class=page-tags>other articles within this series:
+    {% for tag in tags %}
+      <a href="/tag/{{ tag.id }}">{{ tag.name }}</a>
+    {%- endfor %}
+  {% endif %}
+
+{% endblock %}

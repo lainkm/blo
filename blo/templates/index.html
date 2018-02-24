@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Blog {% endblock %}
+{% block body %}
+  {%- for entry in pagination.items %}
+  <div class=entry-overview>
+    {# <div class=date>{{ format_date(entry.pub_time) }}</div> #}
+    <div class=date>
+      <ul>
+        <li class=date >{{ format_date(entry.pub_time) }}</li>
+        <li class=by >by lainly</li>
+        <li class=post > {{ entry.read_times }} read</li>
+      </ul>
+    </div>
+
+    <div class=detail>
+        <h1><a href="/article/{{ entry.id }}">{{ entry.title }}</a></h1>
+      {% if entry.summary %}
+      <div class=summary>{{ entry.summary }}</div>
+      {% endif %}
+    </div>
+  </div>
+  {%- endfor %}
+
+  {% include '_pagination.html' %}
+
+{% endblock %}
+{% block tag %}
+
+  <hr>
+  <ul>
+    {#<li><a href="mailto:lainlyyt@126.com">mail</a</li>#}
+  </ul>
+  {{ wtf.quick_form(form) }}
+  <hr>
+  <h1><a href="/tags">tags:</a></h3>
+  <ul>
+  {% for tag in tags %}
+  <li>
+  <a href="/tag/{{ tag.id }}" class=tag-{{tag.id%7}}>{{ tag.name }}</a>
+  </li>
+  {% endfor %}
+  </ul>
+  <hr>
+  <p><a href="/">Home&nbsp;-&nbsp;my home page</a>
+  <p><a href="/links">Links&nbsp;-&nbsp;quickly browse docs</a>
+  <p><a href="/mark">Mark&nbsp;-&nbsp;fun and useful marks</a>
+  <p><a href="/about">About&nbsp;me&nbsp;-&nbsp;a boring girl</a>
+  <hr>
+  <p style="font-family: 'kaiti'; color: #e1dcec;"> 心中有江山的人  岂能快意潇洒 </p>
+
+{% endblock %}

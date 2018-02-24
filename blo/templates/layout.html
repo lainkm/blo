@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <link rel="shortcut icon" href="/static/favicon.ico">
+  {% block htmlhead %}
+  <title>{% block title %}Home{% endblock %} - {{ config.AUTHOR }}</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    
+  {% endblock %}
+  </head>
+  <body>
+    <div class=container>
+      <div class=header>
+          <a href="/">{{ config.AUTHOR }} </a> - 别急，我们终将爆发
+      </div>
+      <div class=navigation>
+       {# <ul>
+          <li><a href="/">blog</a>
+          <li><a href="/tags">tags</a>
+          <li><a href="/links">links</a>
+          <li><a href="/about">about</a>
+        </ul>
+        #}
+      </div>
+
+
+      <div class=main>
+        <div class=page>
+          <div class=body >
+        {% block body %}{% endblock %}
+          </div>
+        </div>
+
+        <div class=tag>
+        {% block tag %}{% endblock %}
+        </div>
+      </div>
+
+
+      <div class=footer>
+        <p>&copy; 2017- &nbsp; &nbsp;  by Lainly.
+        <p>
+          Content licensed under the Creative Commons
+          attribution-noncommercial-sharealike License.
+        <p>
+          Contact me via <a href="mailto:lainlyyt@126.com">mail</a>,
+          <a href="http://weibo.com/lainly" target="_blank">weibo</a>,
+          or
+          <a href="http://github.com/lainkm" target="_blank">github</a>.
+        <p>
+      </div>
+    </div>
+  </body>
+</html>
