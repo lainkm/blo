@@ -85,5 +85,18 @@ Modify the value of *TOKEN* in [config.py](config.py).
 And use the script `publish.py` to publish articles.
 
 ````
-$ python publish.py -a http://127.0.0.1:5000/publish -p edit.md -t YOURTOKEN
+sudo python3 publish.py -a http://127.0.0.1:5000/publish -p edit.md -t YOURTOKEN
 ````
+
+and after deploy on heroku(same):
+
+````
+sudo python3 publish.py -a https://lainly.herokuapp.com/publish -p edit.md -t YOURTOKEN
+````
+
+TODO
+----
+
+publish article without a script or login-system
+use environment variables(like add .env file) to protect these articles.
+
