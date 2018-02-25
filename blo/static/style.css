@@ -46,8 +46,8 @@ div.main                    { clear: both;
                               overflow: hidden;
                               padding: 40px 0 0 0;}
 div.body                    { clear: both; margin: 0 0px 0 3px; line-height: 2; }
-div.page          { float:left;margin:0 -350px 0 0;width:100%; }
-div.tag           { float:right;overflow:hidden;width:335px; }
+div.page          { float:left;margin:0 -350px 0 0;width:75%; }
+div.tag           { float:right;overflow:hidden;width:25%; }
 div.tag ul {margin-left: 0; padding: 0 20px 0 0;}
 div.tag ul li {display: inline-block;}
 div.tag ul li a      {    text-decoration: none;}
@@ -104,7 +104,7 @@ table.footnote td p     { margin: 0; }
 table.footnote td p + p { margin-top: 15px; }
 
 /* blog overview */
-div.entry-overview                  { margin: 25px 360px 25px 2px; }
+div.entry-overview                  { margin: 25px 10px 25px 2px; }
 div.entry-overview h1,
 div.entry-overview div.summary,
 div.entry-overview div.summary p    { display: inline; line-height: 25px; }

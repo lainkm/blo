@@ -10,6 +10,11 @@ tags:
   - daily6
   - daily7
   - daily8
+  - c++
+  - java
+  - englishword
+  - mark
+  - hahahahah
 ...
 
 
