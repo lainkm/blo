@@ -46,8 +46,8 @@ div.main                    { clear: both;
                               overflow: hidden;
                               padding: 40px 0 0 0;}
 div.body                    { clear: both; margin: 0 0px 0 3px; line-height: 2; }
-div.page          { float:center;margin:0 17% 0 17%; }
-div.page-index          { float:left;margin:0 -350px 0 0;width:75%; }
+div.page                    { float:center;margin:0 17% 0 17%; }
+div.page-index              { float:left;margin:0 -350px 0 0;width:75%; }
 
 div.tag           { float:right;overflow:hidden;width:20%; }
 div.tag ul {margin-left: 0; padding: 0 20px 0 0;}
