@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}{{ entry.title }}{% endblock %}
+{% block body %}
+  {{ entry.title|safe }}
+  <p class=date>written on {{ format_date_weekday(entry.pub_time) }}
+  <br>
+
+  <p class=tags>tags:
+  {% for tag in entry.tags %}
+    <a href="/tag/{{ tag.id }}">{{ tag.name }}</a>
+  {%- endfor %}
+
+  <p>{{ entry.read_times }} read </p>
+
+
+  {{ entry.content|safe }}
+
+
+{% endblock %}
