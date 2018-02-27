@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 {% block title %}Blog {% endblock %}
-{% block body %}
+{% block index_body %}
   {%- for entry in pagination.items %}
   <div class=entry-overview>
     {# <div class=date>{{ format_date(entry.pub_time) }}</div> #}
@@ -33,11 +33,11 @@
   </ul>
   {{ wtf.quick_form(form) }}
   <hr>
-  <h1><a href="/tags">tags:</a></h3>
+  <h2><a style="color: #EE3B3B;" href="/tags">Tags:</a></h2>
   <ul>
   {% for tag in tags %}
   <li>
-  <a href="/tag/{{ tag.id }}" class=tag-{{tag.id%7}}>{{ tag.name }}</a>
+  <a  href="/tag/{{ tag.id }}" class=tag-{{tag.id%7}}>{{ tag.name }}</a>
   </li>
   {% endfor %}
   </ul>

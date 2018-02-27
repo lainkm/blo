@@ -1,7 +1,7 @@
 Publish Articles
 ================
 
-* **[heroku](https://lainly.herokuapp.com/)**
+Link: [lainly.heroku.com](https://lainly.herokuapp.com/)**
 
 Quick Start
 -----------
@@ -63,7 +63,7 @@ Write articles
 
 * **tags** (optional)
 
-  ````
+````
   ---
   title: This is a title
   summary:
@@ -75,31 +75,46 @@ Write articles
   ...
 
   Write the body content here..
-  ````
+````
 
 
 Upload articles
 ---------------
 
 Modify the value of *TOKEN* in [config.py](config.py). 
-And use the script `publish.py` to publish articles.
+And use the script `publish.py` to publish articles.(Use sudo -E to propagate variables)
 
 ````
-sudo python3 publish.py -a http://127.0.0.1:5000/publish -p edit.md -t YOURTOKEN
+export TOKEN=YOURTOKEN
+sudo -E python3 publish.py -a http://127.0.0.1:5000/publish -p edit.md -t YOURTOKEN
+````
+
+or 
+
+````
+* local.env *
+export TOKEN=YOURTOKEN
+
+$ source local.env
+$ sudo -E python3 publish.py -a http://127.0.0.1:5000/publish -p edit.md -t YOURTOKEN
 ````
 
 and after deploy on heroku(same):
 
 
 ````
+heroku config:set TOKEN=YOURTOKEN
 sudo python3 publish.py -a https://lainly.herokuapp.com/publish -p edit.md -t YOURTOKEN
 ````
 
 
-heroku
-------
+heroku push
+-----------
 
 ````
+git add ***
+git commit -m "***"
+
 heroku maintenance:on
 git push heroku master
 heroku run python manage.py db upgrade
@@ -110,6 +125,6 @@ heroku maintenance:off
 TODO
 ----
 
-publish article without a script or login-system
+publish article without a script or user login haddling.
 use environment variables(like add .env file) to protect these articles.
 

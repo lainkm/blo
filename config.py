@@ -8,13 +8,13 @@ class Config:
 	# SQLALCHEMY_TRACK_MODIFICATIONS = True 为了消除warning，但是这一句加上，在保存到数据库会卡死？？？
 
 	AUTHOR = 'Lainly'
-	POSTS_PRE_PAGE = 7
+	POSTS_PRE_PAGE = 5
 
 	# this is useful for submitting markdow files
 	# when publish new articles
 	TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 	SECRET_KEY = 'xixixixihahahhahah'
-	TOKEN = '666666'
+	TOKEN = os.environ.get('TOKEN')
 
 	@staticmethod
 	def init_app(app):

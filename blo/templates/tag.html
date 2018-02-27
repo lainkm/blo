@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block title %}Entries tagged “{{ tag.name }}”{% endblock %}
 {% block body %}
-  <h1>Entries <a href="">tagged</a> “{{ tag.name }}”</h1>
+  <h1><a href="">Tag</a> --  “{{ tag.name }}”:</h1>
   <ul>
   {%- for entry in entries %}
     <li>

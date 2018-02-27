@@ -7,7 +7,7 @@
 /* general style */
 body    { font: 17px/25px 'Merriweather', serif;
           margin: 0; padding: 0; font-weight: 400; color: black; }
-a       { color: #FC94C5; }
+a       { color: #FF69B4; }
 a:hover { color: #BF9AAB; }
 
 /* headlines */
@@ -33,11 +33,11 @@ h1 em                       { color: black; font-size: 32px; display: block;
 /* layout elements */
 div.container               { max-width: 1480px; margin: 48px auto; padding: 0 40px; }
 div.header                  { float: left; font-family: 'kaiti'; color: #FC94C5;
-  text-shadow: 4px 4px 4px #aaa;}
+                                text-shadow: 4px 4px 4px #aaa;}
 div.header a                {text-decoration: none; font-size: 50px;
-  font-family: 'Tangerine', serif;
-  font-size: 52px;
-  text-shadow: 4px 4px 4px #aaa;}
+                              font-family: 'Tangerine', serif;
+                              font-size: 80px;
+                              text-shadow: 4px 4px 4px #aaa;}
 div.navigation              { float: right; }
 div.header, div.navigation  { height: 25px; margin-bottom: 42px; }
 div.navigation ul           { margin: 0; padding: 0; list-style: none; }
@@ -46,8 +46,10 @@ div.main                    { clear: both;
                               overflow: hidden;
                               padding: 40px 0 0 0;}
 div.body                    { clear: both; margin: 0 0px 0 3px; line-height: 2; }
-div.page          { float:left;margin:0 -350px 0 0;width:75%; }
-div.tag           { float:right;overflow:hidden;width:25%; }
+div.page          { float:center;margin:0 17% 0 17%; }
+div.page-index          { float:left;margin:0 -350px 0 0;width:75%; }
+
+div.tag           { float:right;overflow:hidden;width:20%; }
 div.tag ul {margin-left: 0; padding: 0 20px 0 0;}
 div.tag ul li {display: inline-block;}
 div.tag ul li a      {    text-decoration: none;}
@@ -146,9 +148,9 @@ div.adspace iframe {
     margin: 25px auto 25px auto;
 }
 
-.tag-1 {font-size: 18px}
-.tag-2 {font-size: 21px}
-.tag-3 {font-size: 28px}
+.tag-1 {font-size: 28px}
+.tag-2 {font-size: 18px}
+.tag-3 {font-size: 21px}
 .tag-4 {font-size: 23px}
 .tag-5 {font-size: 25px}
 .tag-6 {font-size: 32px}

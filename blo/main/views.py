@@ -6,7 +6,7 @@ from flask import render_template, request, abort, current_app
 from sqlalchemy import and_
 from . import main
 from .. import db
-from ..models import Article, Tag, create_article
+from ..models import Article, Tag, create_article, delete_article
 from ..utils import markdown2html, load_content
 from .forms import SearchForm
 
@@ -98,6 +98,22 @@ def mark():
   return render_template('page.html',
                           title='Mark',
                           content=content)
+
+@main.route('/delete', methods=['GET', 'POST'])
+def delete():
+  if request.method == 'GET':
+    abort(404)
+
+  token = request.form.get('token', '')
+  if token != current_app.config['TOKEN']:
+    return 'invalid access token', 500
+
+  title = request.form.get('title', None)
+  if not title:
+      return 'no title found', 500
+
+  print(delete_article(title))
+  return '', 200
 
 
 @main.route('/publish', methods=['GET', 'POST'])

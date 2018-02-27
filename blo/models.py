@@ -35,12 +35,24 @@ class Article(db.Model):
         db.session.commit()
         return self
 
+    def delete(self):
+        try:
+            db.session.delete(self)
+            db.session.commit()
+        except:
+            db.session.rollback()
+            raise
+        return self
+
     def add_read(self):
         if self.read_times == None:
             self.read_times = 1
         print(self.read_times)
         self.read_times = self.read_times + 1
         self.save()
+
+    def __str__(self):
+        return self.title
 
 
 class Tag(db.Model):
@@ -75,3 +87,13 @@ def create_article(title, summary, content, pub_time=None, tagnames=[]):
     article.save()
     return article
 
+def delete_article(title):
+    a = db.session.query(Article).filter(Article.title==title).first()
+    if a is None:
+        return "Article doesn't exsit."
+    a.delete()
+    a = db.session.query(Article).filter(Article.title==title).first()
+    if a:
+        return "delete failed."
+    else:
+        return "delete success."
