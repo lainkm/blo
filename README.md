@@ -1,7 +1,8 @@
 Blog
 ====
 
-this repo is written by flask, and django edtion click[here](https://github.com/lainkm/blog)
+this repo is written by flask, and django edtion click [here](https://github.com/lainkm/blog)
+
 Blog [lainlyyt](https://lainlyyt.herokuapp.com/)
 
 
