@@ -1,4 +1,7 @@
 *.pyc
-ENV/
-temp/
+venv/
+tmp/
+migrations/
 local.env
+a1.md
+a2.md

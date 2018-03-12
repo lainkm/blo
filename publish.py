@@ -18,10 +18,6 @@ from lxml import html
 
 
 def _get_file(path):
-    # if (path.startswith('http://') or path.startswith('https://') or
-    #     path.startswith('ftp://')):
-    #     r = requests.get(path)
-    #     return BytesIO(r.content)
     return open(path)
 
 
@@ -29,7 +25,6 @@ def _gen_summary(mdtext, n=360):
     htmltext = markdown.markdown(mdtext)
     tree = html.fromstring(htmltext)
     node = tree.xpath('.')[0]
-    # print(node.text_content())
     text = re.sub(r'\s+', ' ', node.text_content()).strip()
     return text[:n] + ' ...'
 

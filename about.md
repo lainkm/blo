@@ -1,7 +1,8 @@
 About Me
 ========
 
-contact me with
+contact me via
+--------------
 
 * [email](mailto:lainlyyt@126.com)
 * [github](https://github.com/lainkm/)
