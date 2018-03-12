@@ -1,7 +1,7 @@
 Blog
 ====
 
-this repo is written by flask, and django edtion click(here)[https://github.com/lainkm/blog]
+this repo is written by flask, and django edtion click[here](https://github.com/lainkm/blog)
 Blog [lainlyyt](https://lainlyyt.herokuapp.com/)
 
 
@@ -114,4 +114,4 @@ TODO
     Publish article without a script or user login haddling.(done)
     Publish/edit/delete article via form.(sames that i have to write user auth..)(done)
     Use environment variables(like add .env file) to protect these articles.(done)
-	use django(done) (https://github.com/lainkm/blog)[https://github.com/lainkm/blog]
+	use django(done) [https://github.com/lainkm/blog](https://github.com/lainkm/blog)
